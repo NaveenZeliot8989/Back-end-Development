@@ -31,7 +31,7 @@ const Registration = sequelize.define("registration", {
       isEmail: true,
     },
   },
-  Pincode: {
+  pincode: {
     type: DataTypes.STRING,
     allowNull: true,
     validate: {
