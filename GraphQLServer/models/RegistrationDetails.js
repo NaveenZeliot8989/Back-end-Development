@@ -13,37 +13,22 @@ const Registration = sequelize.define("registration", {
   email: {
     type: DataTypes.STRING,
     allowNull: true,
-    validate: {
-      isEmail: true,
-    },
   },
   phoneNumber: {
     type: DataTypes.STRING,
     allowNull: true,
-    validate: {
-      is: /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/, // Phone number format validation (e.g., +1234567890)
-    },
   },
   address: {
     type: DataTypes.STRING,
     allowNull: true,
-    validate: {
-      isEmail: true,
-    },
   },
   pincode: {
     type: DataTypes.STRING,
     allowNull: true,
-    validate: {
-      isEmail: true,
-    },
   },
   nationality: {
     type: DataTypes.STRING,
     allowNull: true,
-    validate: {
-      isEmail: true,
-    },
   },
 });
 
