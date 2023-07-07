@@ -1,7 +1,11 @@
 const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
+const sequelize = require("./config/database");
+const Registration = require("./models/RegistrationDetails");
 
 async function startServer() {
+  await sequelize.sync(); // Sync the models with the database
+
   const app = express();
 
   // GraphQL schema
@@ -14,7 +18,7 @@ async function startServer() {
   // GraphQL resolvers
   const resolvers = {
     Query: {
-      hello: () => "Hello, GraphQL!",
+      async getRegistrationDetails(root, args, context) {},
     },
   };
 
